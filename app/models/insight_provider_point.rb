@@ -1,0 +1,2 @@
+class InsightProviderPoint < ApplicationRecord
+end

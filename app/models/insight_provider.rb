@@ -1,0 +1,2 @@
+class InsightProvider < ApplicationRecord
+end
