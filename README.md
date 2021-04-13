@@ -1,24 +1,21 @@
-# README
+# SmartKarma
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
+- [Docker CE](https://docs.docker.com/get-docker/)
 
-Things you may want to cover:
+## Installation
+`docker-compose build`
 
-* Ruby version
+### Add Database Configuration
+`cp config/database.yml.sample config/database.yml`
 
-* System dependencies
+### Create Databases
+`docker-compose run --rm web rake db:create db:migrate db:seed`
 
-* Configuration
+## Running the App
+`docker-compose up`
 
-* Database creation
+## Optional: Install without docker
+- Ruby 3.0.1
+- Postgresql 13
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
