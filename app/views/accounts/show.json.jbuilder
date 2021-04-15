@@ -1,0 +1,15 @@
+json.slug @account.slug
+json.rank @account.rank
+json.name @account.name
+json.headline @account.headline
+json.description @account.description
+json.location @account.country
+json.joined_date @account.created_at
+json.experiences @account.experience
+json.expertises @account.insight_provider.areas_of_expertise
+json.linked_in @account.linked_in
+json.twitter @account.twitter
+json.website @account.website
+json.total_published_insights @account.insight_provider.insight_provider_point.total_published_insights
+json.total_viewed_insights @account.insight_provider.insight_provider_point.total_viewed_insights
+json.total_followers @account.insight_provider.insight_provider_point.total_followers

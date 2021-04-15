@@ -33,5 +33,16 @@ module Smartkarma
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    config.autoload_paths += %W(#{config.root}/config/routes #{config.root}/app/services)
+
+    config.generators do |g|
+      g.test_framework :rspec, fixtures: true
+      g.fixture_replacement :factory_bot, dir: 'spec/factories'
+      g.assets false
+      g.helper false
+      g.helper_specs false
+      g.view_specs false
+    end
   end
 end
